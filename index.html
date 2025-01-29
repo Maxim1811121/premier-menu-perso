@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permet au site de s'adapter aux écrans mobiles -->
+    <title>Menu Design sans JavaScript</title>
+    <link rel="stylesheet" href="CSS/annination.css">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <!-- Logo du site -->
+        <a href="#" class="logo">MonSite</a>
+        
+        <!-- Case à cocher pour activer le menu -->
+        <input type="checkbox" id="toggle"> <!-- Case à cocher cachée, utilisée comme déclencheur -->
+
+        <!-- Bouton hamburger -->
+        <label for="toggle" class="hamburger"> <!-- Associe le label à la case via l'attribut "for" -->
+            <span></span> <!-- Barre 1 du hamburger -->
+            <span></span> <!-- Barre 2 du hamburger -->
+            <span></span> <!-- Barre 3 du hamburger -->
+        </label>
+
+        <!-- Menu principal -->
+        <ul class="menu">
+            <li><a href="#home">Accueil</a></li> <!-- Lien vers la section "Accueil" -->
+            <li><a href="#about">À propos</a></li> <!-- Lien vers la section "À propos" -->
+            <li><a href="#services">Services</a></li> <!-- Lien vers la section "Services" -->
+            <li><a href="#contact">Contact</a></li> <!-- Lien vers la section "Contact" -->
+        </ul>
+    </nav>
+</body>
+</html>

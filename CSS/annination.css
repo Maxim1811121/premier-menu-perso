@@ -1,0 +1,89 @@
+/* Style général */
+body {
+    margin: 0; /* Supprime les marges par défaut de la page */
+    font-family: Arial, sans-serif; /* Définit une police lisible pour tout le site */
+}
+
+/* Conteneur principal du menu */
+.navbar {
+    display: flex; /* Active un affichage flexible pour organiser les éléments */
+    justify-content: space-between; /* Sépare les éléments : logo à gauche et menu à droite */
+    align-items: center; /* Aligne verticalement les éléments */
+    background-color: #333; /* Définit une couleur de fond sombre pour la barre */
+    padding: 10px 20px; /* Ajoute un espace intérieur au conteneur */
+}
+
+/* Style du logo */
+.navbar .logo {
+    color: #fff; /* Couleur blanche pour le texte */
+    font-size: 1.5em; /* Agrandit la taille de la police */
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+/* Liste des liens dans le menu */
+.navbar .menu {
+    list-style: none; /* Supprime les puces des listes */
+    display: flex; /* Affiche les éléments en ligne */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les paddings */
+}
+
+/* Chaque élément de la liste */
+.navbar .menu li {
+    margin: 0 15px; /* Ajoute un espace entre les liens */
+}
+
+/* Style des liens */
+.navbar .menu li a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #fff; /* Définit la couleur blanche */
+    font-size: 1em; /* Taille normale de la police */
+}
+
+/* Couleur lors du survol des liens */
+.navbar .menu li a:hover {
+    color: #ff6347; /* Change la couleur en orange clair */
+}
+
+/* Case à cocher qui déclenche le menu (cachée) */
+#toggle {
+    display: none; /* Cache la case à cocher visuellement */
+}
+
+/* Bouton hamburger pour afficher le menu */
+.hamburger {
+    display: none; /* Caché par défaut sur les grands écrans */
+    flex-direction: column; /* Place les barres verticalement */
+    cursor: pointer; /* Change le curseur en pointeur (cliquable) */
+} 
+
+.hamburger span {
+    width: 25px; /* Largeur des barres */
+    height: 3px; /* Hauteur des barres */
+    background-color: #fff; /* Couleur blanche */
+    margin: 3px 0; /* Espacement entre les barres */
+}
+
+/* Responsiveness : Styles spécifiques aux petits écrans */
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column; /* Aligne les éléments verticalement */
+        background-color: #333; /* Fond sombre pour le menu */
+        position: absolute; /* Positionne le menu par rapport au conteneur */
+        top: 50px; /* Place le menu sous le logo */
+        right: 20px; /* Place le menu à droite de l'écran */
+        width: 200px; /* Largeur du menu */
+        border-radius: 8px; /* Ajoute des coins arrondis */
+    }
+
+    /* Affiche le menu si la case à cocher est activée */
+    #toggle:checked + .hamburger + .menu {
+        display: flex; /* Affiche le menu en colonne */
+    }
+
+    /* Affiche le bouton hamburger */
+    .hamburger {
+        display: flex;
+    }
+}
